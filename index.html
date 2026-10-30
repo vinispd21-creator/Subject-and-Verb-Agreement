@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subject-Verb Agreement Masterclass | TOEFL Phase E Grade 12</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Canvas Confetti -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        pixarBlue: '#1EA1F2',
+                        pixarYellow: '#FFD000',
+                        pixarRed: '#FF4B4B',
+                        pixarPurple: '#8A4FFF',
+                        pixarGreen: '#2ECC71',
+                        pixarDark: '#1E293B'
+                    },
+                    fontFamily: {
+                        heading: ['"Fredoka One"', 'cursive'],
+                        body: ['Nunito', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Nunito', sans-serif;
+            background: linear-gradient(135deg, #e0f2fe 0%, #f0f9ff 100%);
+        }
+        .font-heading {
+            font-family: 'Fredoka One', cursive;
+        }
+        /* 3D Card Effects */
+        .pixar-card {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 0 #cbd5e1, 0 15px 25px rgba(0,0,0,0.1);
+            transition: all 0.2s ease;
+        }
+        .pixar-card:hover {
+            transform: translateY(-3px);
+        }
+        .pixar-btn {
+            border-radius: 16px;
+            font-family: 'Fredoka One', cursive;
+            transition: all 0.1s ease;
+            position: relative;
+            top: 0;
+        }
+        .pixar-btn:active {
+            top: 6px;
+            box-shadow: none !important;
+        }
+        .btn-blue {
+            background-color: #1EA1F2;
+            color: white;
+            box-shadow: 0 6px 0 #0c7abf;
+        }
+        .btn-green {
+            background-color: #2ECC71;
+            color: white;
+            box-shadow: 0 6px 0 #1b9e52;
+        }
+        .btn-yellow {
+            background-color: #FFD000;
+            color: #1E293B;
+            box-shadow: 0 6px 0 #c7a200;
+        }
+        .btn-red {
+            background-color: #FF4B4B;
+            color: white;
+            box-shadow: 0 6px 0 #b82525;
+        }
+        .btn-purple {
+            background-color: #8A4FFF;
+            color: white;
+            box-shadow: 0 6px 0 #5c22c9;
+        }
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #94a3b8;
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #64748b;
+        }
+        .character-img {
+            filter: drop-shadow(0px 10px 10px rgba(0,0,0,0.15));
+        }
+    </style>
+</head>
+<body class="min-h-screen text-slate-800 flex flex-col justify-between">
+
+    <!-- Header Navigation -->
+    <header class="bg-white border-b-4 border-slate-200 sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-3 cursor-pointer" onclick="showSection('welcome')">
+                <div class="bg-pixarYellow text-slate-800 p-2 rounded-2xl shadow-md transform -rotate-6">
+                    <i class="fa-solid fa-graduation-cap text-2xl"></i>
+                </div>
+                <div>
+                    <h1 class="font-heading text-xl md:text-2xl text-pixarBlue leading-tight">TOEFL S-V Mastery</h1>
+                    <p class="text-xs text-slate-500 font-bold">Fase E - SMA Grade 12</p>
+                </div>
+            </div>
+
+            <!-- Sound Toggle Button -->
+            <button id="soundToggleBtn" onclick="toggleSound()" class="pixar-btn btn-yellow px-3 py-2 text-sm flex items-center gap-2">
+                <i id="soundIcon" class="fa-solid fa-volume-high"></i>
+                <span id="soundText" class="hidden sm:inline">Sound ON</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="max-w-5xl mx-auto px-4 py-6 flex-grow w-full">
+
+        <!-- ================= WELCOME / HOME SECTION ================= -->
+        <section id="welcome-section" class="space-y-6">
+            <div class="pixar-card p-6 md:p-10 text-center bg-gradient-to-b from-white to-blue-50 border-4 border-pixarBlue">
+                <div class="flex justify-center mb-4">
+                    <img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=400&q=80" alt="3D Pixar Robot Teacher" class="w-40 h-40 object-cover rounded-full border-4 border-pixarYellow shadow-lg character-img">
+                </div>
+                <h2 class="font-heading text-3xl md:text-4xl text-slate-800 mb-2">Welcome to Subject-Verb Agreement Masterclass!</h2>
+                <p class="text-slate-600 max-w-xl mx-auto text-base md:text-lg mb-6">
+                    Hi! I'm your TOEFL Assistant Robot. Let's master <span class="font-bold text-pixarBlue">Subject & Verb Agreement</span> together in a fun and super easy way!
+                </p>
+                
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto">
+                    <button onclick="showSection('guide')" class="pixar-btn btn-blue p-4 text-center">
+                        <i class="fa-solid fa-book-open text-2xl mb-1 block"></i>
+                        <span>Guide</span>
+                    </button>
+                    <button onclick="showSection('material')" class="pixar-btn btn-green p-4 text-center">
+                        <i class="fa-solid fa-lightbulb text-2xl mb-1 block"></i>
+                        <span>Lessons</span>
+                    </button>
+                    <button onclick="showSection('games')" class="pixar-btn btn-purple p-4 text-center">
+                        <i class="fa-solid fa-gamepad text-2xl mb-1 block"></i>
+                        <span>3 Mini-Games</span>
+                    </button>
+                    <button onclick="showSection('quiz')" class="pixar-btn btn-red p-4 text-center">
+                        <i class="fa-solid fa-trophy text-2xl mb-1 block"></i>
+                        <span>Quiz</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= GUIDE & OBJECTIVES ================= -->
+        <section id="guide-section" class="hidden space-y-6">
+            <div class="pixar-card p-6 md:p-8">
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="bg-pixarBlue text-white p-3 rounded-2xl"><i class="fa-solid fa-compass text-2xl"></i></div>
+                    <div>
+                        <h2 class="font-heading text-2xl md:text-3xl text-slate-800">Panduan & Tujuan Pembelajaran</h2>
+                        <p class="text-xs text-slate-500 font-bold">Guide & Learning Objectives</p>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-6">
+                    <!-- Objectives -->
+                    <div class="bg-blue-50 border-2 border-blue-200 rounded-2xl p-5">
+                        <h3 class="font-heading text-xl text-pixarBlue mb-3 flex items-center gap-2">
+                            <i class="fa-solid fa-bullseye"></i> Tujuan Pembelajaran
+                        </h3>
+                        <p class="text-slate-700 leading-relaxed font-semibold">
+                            Murid kelas 12 SMA (Fase E) dapat <span class="bg-pixarYellow px-2 py-1 rounded">memahami dan menerapkan</span> aturan <i>Subject and Verb Agreement</i> dengan tepat untuk persiapan tes TOEFL.
+                        </p>
+                    </div>
+
+                    <!-- User Guide -->
+                    <div class="bg-purple-50 border-2 border-purple-200 rounded-2xl p-5">
+                        <h3 class="font-heading text-xl text-pixarPurple mb-3 flex items-center gap-2">
+                            <i class="fa-solid fa-map-location-dot"></i> Panduan Penggunaan
+                        </h3>
+                        <ul class="text-slate-700 space-y-2 text-sm">
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-check text-pixarGreen mt-1"></i>
+                                <span><b>Step 1:</b> Pelajari Materi Singkat di menu <b>Lessons</b>.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-check text-pixarGreen mt-1"></i>
+                                <span><b>Step 2:</b> Latih pemahamanmu di <b>3 Mini-Games</b> interaktif.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-check text-pixarGreen mt-1"></i>
+                                <span><b>Step 3:</b> Uji kemampuan TOEFL-mu di menu <b>Quiz (5 Soal PG)</b>.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="mt-6 text-center">
+                    <button onclick="showSection('material')" class="pixar-btn btn-green px-6 py-3 text-lg">
+                        Mulai Belajar Materi <i class="fa-solid fa-arrow-right ml-2"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= MATERIAL SECTION ================= -->
+        <section id="material-section" class="hidden space-y-6">
+            <div class="pixar-card p-6 md:p-8">
+                <!-- Navigation Tabs inside Material -->
+                <div class="flex flex-wrap gap-2 mb-6 border-b pb-4">
+                    <button onclick="showTab('mat-def')" id="tab-def" class="mat-tab pixar-btn btn-blue px-4 py-2 text-sm">1. Definition</button>
+                    <button onclick="showTab('mat-func')" id="tab-func" class="mat-tab pixar-btn btn-yellow px-4 py-2 text-sm">2. Function</button>
+                    <button onclick="showTab('mat-struct')" id="tab-struct" class="mat-tab pixar-btn btn-purple px-4 py-2 text-sm">3. Structure Rules</button>
+                    <button onclick="showTab('mat-ex')" id="tab-ex" class="mat-tab pixar-btn btn-green px-4 py-2 text-sm">4. TOEFL Examples</button>
+                </div>
+
+                <!-- 1. Definition -->
+                <div id="mat-def" class="mat-content space-y-4">
+                    <div class="flex items-center gap-4 bg-yellow-50 p-4 rounded-2xl border-2 border-yellow-200">
+                        <img src="https://images.unsplash.com/photo-1535378917042-10a22c95931a?auto=format&fit=crop&w=200&q=80" class="w-24 h-24 object-cover rounded-xl shadow-md" alt="Pixar Robot">
+                        <div>
+                            <h3 class="font-heading text-2xl text-pixarBlue">Apa itu Subject-Verb Agreement?</h3>
+                            <p class="text-slate-600 mt-1">
+                                Simply put: <b>Singular Subject</b> must have a <b>Singular Verb</b>, and <b>Plural Subject</b> must have a <b>Plural Verb</b>! Mereka harus "akur" atau sejalan!
+                            </p>
+                        </div>
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-4 pt-2">
+                        <div class="p-4 bg-blue-100 rounded-2xl border-2 border-blue-300">
+                            <h4 class="font-bold text-pixarBlue text-lg">Singular (Tunggal)</h4>
+                            <p class="text-sm text-slate-700 mt-1">1 Person/Thing ➔ Verb pakai <b>-s/-es</b> (Present) atau <b>was/is/has</b></p>
+                            <p class="text-xs bg-white p-2 rounded-lg mt-2 font-mono">Example: The <b>student <u>walks</u></b> to school.</p>
+                        </div>
+                        <div class="p-4 bg-green-100 rounded-2xl border-2 border-green-300">
+                            <h4 class="font-bold text-pixarGreen text-lg">Plural (Jamak)</h4>
+                            <p class="text-sm text-slate-700 mt-1">&gt;1 Person/Thing ➔ Verb <b>tanpa -s</b> atau <b>were/are/have</b></p>
+                            <p class="text-xs bg-white p-2 rounded-lg mt-2 font-mono">Example: The <b>students <u>walk</u></b> to school.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. Function -->
+                <div id="mat-func" class="mat-content hidden space-y-4">
+                    <h3 class="font-heading text-2xl text-pixarPurple">Fungsi dalam TOEFL Test</h3>
+                    <p class="text-slate-600">Mengapa materi ini sangat penting untuk siswa Kelas 12 SMA?</p>
+                    
+                    <div class="grid md:grid-cols-3 gap-4">
+                        <div class="p-4 bg-purple-50 rounded-2xl border-2 border-purple-200">
+                            <div class="text-pixarPurple text-3xl mb-2"><i class="fa-solid fa-pen-nib"></i></div>
+                            <h4 class="font-bold text-slate-800">1. Structure Section</h4>
+                            <p class="text-sm text-slate-600 mt-1">Membantu memilih kata kerja yang benar untuk melengkapi kalimat rumpang.</p>
+                        </div>
+                        <div class="p-4 bg-red-50 rounded-2xl border-2 border-red-200">
+                            <div class="text-pixarRed text-3xl mb-2"><i class="fa-solid fa-bug"></i></div>
+                            <h4 class="font-bold text-slate-800">2. Written Expression</h4>
+                            <p class="text-sm text-slate-600 mt-1">Membantu mendeteksi kesalahan tata bahasa (error identification) pada kalimat TOEFL.</p>
+                        </div>
+                        <div class="p-4 bg-yellow-50 rounded-2xl border-2 border-yellow-200">
+                            <div class="text-pixarYellow text-3xl mb-2"><i class="fa-solid fa-comments"></i></div>
+                            <h4 class="font-bold text-slate-800">3. Accurate Communication</h4>
+                            <p class="text-sm text-slate-600 mt-1">Meningkatkan keakuratan menulis dan berbicara dalam bahasa Inggris standar.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Structure -->
+                <div id="mat-struct" class="mat-content hidden space-y-4">
+                    <h3 class="font-heading text-2xl text-pixarGreen">Aturan Utama TOEFL (Structure Rules)</h3>
+                    <p class="text-slate-600 text-sm">Diambil dari panduan TOEFL PBT (Section 2 - Structure & Written Expression):</p>
+
+                    <div class="space-y-3">
+                        <!-- Rule 1 -->
+                        <div class="p-4 bg-slate-50 border-l-4 border-pixarBlue rounded-r-2xl">
+                            <h4 class="font-bold text-pixarBlue">Rule 1: Prepositional Phrases (Jebakan Pengganggu!)</h4>
+                            <p class="text-sm text-slate-600 mt-1">Kata di antara Subject dan Verb (seperti <i>of, in, with, on, along with</i>) BUKAN Subject!</p>
+                            <div class="bg-white p-2 rounded-xl border mt-2 text-xs font-mono">
+                                The key <span class="text-red-500 font-bold">(to the doors)</span> <span class="text-pixarBlue font-bold">is</span> missing. (Subject = key [Singular])
+                            </div>
+                        </div>
+
+                        <!-- Rule 2 -->
+                        <div class="p-4 bg-slate-50 border-l-4 border-pixarPurple rounded-r-2xl">
+                            <h4 class="font-bold text-pixarPurple">Rule 2: Expressions of Quantity (Some, All, Most)</h4>
+                            <p class="text-sm text-slate-600 mt-1">Subject tergantung kata benda di dalam frasa "of...":</p>
+                            <div class="bg-white p-2 rounded-xl border mt-2 text-xs font-mono">
+                                Most of the <b>book</b> <span class="text-pixarPurple font-bold">is</span> interesting. (Uncountable/Singular)<br>
+                                Most of the <b>books</b> <span class="text-pixarPurple font-bold">are</span> interesting. (Plural)
+                            </div>
+                        </div>
+
+                        <!-- Rule 3 -->
+                        <div class="p-4 bg-slate-50 border-l-4 border-pixarGreen rounded-r-2xl">
+                            <h4 class="font-bold text-pixarGreen">Rule 3: Inverted Subjects (There / Here & Prepositions)</h4>
+                            <p class="text-sm text-slate-600 mt-1">Jika kalimat dimulai dengan <i>There/Here</i> atau frasa tempat, Subject ada di BELAKANG Verb!</p>
+                            <div class="bg-white p-2 rounded-xl border mt-2 text-xs font-mono">
+                                There <span class="text-pixarGreen font-bold">are</span> three <b>tests</b> today. (Subject = tests)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. Examples -->
+                <div id="mat-ex" class="mat-content hidden space-y-4">
+                    <h3 class="font-heading text-2xl text-pixarYellow text-slate-800">Contoh Soal TOEFL</h3>
+                    
+                    <div class="p-4 bg-yellow-50 border-2 border-yellow-300 rounded-2xl space-y-3">
+                        <p class="font-bold text-slate-800">Example 1 (TOEFL Style):</p>
+                        <p class="font-mono bg-white p-3 rounded-xl border text-sm">
+                            The articles in this magazine ______ very informative for high school students.
+                        </p>
+                        <div class="text-sm text-slate-700 space-y-1">
+                            <p>A) is &nbsp;&nbsp;&nbsp; B) was &nbsp;&nbsp;&nbsp; <b class="text-pixarGreen">C) are</b> &nbsp;&nbsp;&nbsp; D) has been</p>
+                            <p class="text-xs text-slate-500 bg-white p-2 rounded-lg border mt-2">
+                                <b>Penjelasan:</b> Subject kalimat adalah <b>"The articles"</b> (Plural), bukan "magazine". Maka butuh Verb jamak yaitu <b>are</b>.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-6 flex justify-between">
+                    <button onclick="showSection('guide')" class="pixar-btn btn-blue px-4 py-2 text-sm"><i class="fa-solid fa-arrow-left mr-1"></i> Back</button>
+                    <button onclick="showSection('games')" class="pixar-btn btn-purple px-6 py-2 text-sm">Play Mini-Games <i class="fa-solid fa-gamepad ml-1"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= GAMES SECTION ================= -->
+        <section id="games-section" class="hidden space-y-6">
+            <div class="pixar-card p-6 md:p-8">
+                <div class="text-center mb-6">
+                    <h2 class="font-heading text-3xl text-pixarPurple">3 Interactive TOEFL Mini-Games</h2>
+                    <p class="text-slate-600 text-sm">Pilih game untuk melatih ketangkasan tata bahasamu!</p>
+                </div>
+
+                <!-- Game Selection Tabs -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                    <button onclick="loadGame(1)" id="btn-game-1" class="pixar-btn btn-blue p-4 text-left">
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-robot text-3xl"></i>
+                            <div>
+                                <h4 class="font-bold">Game 1</h4>
+                                <p class="text-xs opacity-90">Subject & Verb Match</p>
+                            </div>
+                        </div>
+                    </button>
+
+                    <button onclick="loadGame(2)" id="btn-game-2" class="pixar-btn btn-yellow p-4 text-left">
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-ghost text-3xl"></i>
+                            <div>
+                                <h4 class="font-bold">Game 2</h4>
+                                <p class="text-xs opacity-90">Distractor Buster</p>
+                            </div>
+                        </div>
+                    </button>
+
+                    <button onclick="loadGame(3)" id="btn-game-3" class="pixar-btn btn-green p-4 text-left">
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-bolt text-3xl"></i>
+                            <div>
+                                <h4 class="font-bold">Game 3</h4>
+                                <p class="text-xs opacity-90">Speed S-V Runner</p>
+                            </div>
+                        </div>
+                    </button>
+                </div>
+
+                <!-- Game Display Arena -->
+                <div id="game-arena" class="bg-slate-50 border-4 border-dashed border-slate-300 rounded-2xl p-6 min-h-[300px] flex flex-col justify-center items-center">
+                    <!-- Dynamic Game Content Injected Here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= QUIZ SECTION ================= -->
+        <section id="quiz-section" class="hidden space-y-6">
+            <div class="pixar-card p-6 md:p-8">
+                <div class="flex justify-between items-center mb-6 border-b pb-4">
+                    <div>
+                        <h2 class="font-heading text-2xl text-pixarRed">TOEFL Assessment Quiz</h2>
+                        <p class="text-xs text-slate-500 font-bold">5 Soal Pilihan Ganda (Level A1-A2)</p>
+                    </div>
+                    <div class="bg-red-100 text-pixarRed font-heading px-4 py-2 rounded-xl border border-red-200">
+                        Score: <span id="quiz-score-display">0</span>/100
+                    </div>
+                </div>
+
+                <div id="quiz-container" class="space-y-6">
+                    <!-- Quiz Questions will be loaded dynamically -->
+                </div>
+
+                <div id="quiz-result" class="hidden text-center p-6 bg-yellow-50 rounded-2xl border-4 border-pixarYellow space-y-4">
+                    <i class="fa-solid fa-crown text-5xl text-pixarYellow"></i>
+                    <h3 class="font-heading text-3xl text-slate-800">Quiz Completed!</h3>
+                    <p class="text-lg">Nilai Akhir Kamu: <span id="final-score" class="font-heading text-pixarBlue text-3xl">0</span></p>
+                    <p id="quiz-feedback" class="text-slate-600 font-semibold"></p>
+                    <button onclick="resetQuiz()" class="pixar-btn btn-green px-6 py-3 text-base">Coba Lagi <i class="fa-solid fa-rotate-right ml-1"></i></button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer Developer Credits -->
+    <footer class="bg-white border-t-4 border-slate-200 py-4 text-center mt-8">
+        <div class="max-w-6xl mx-auto px-4">
+            <p class="text-xs md:text-sm font-bold text-slate-600">
+                Media Pembelajaran Interaktif TOEFL &copy; 2026
+            </p>
+            <p class="text-xs text-pixarBlue font-semibold mt-1">
+                <i class="fa-solid fa-user-tie mr-1"></i> Pengembang: <b>Vini Safitri</b> | English Teacher, SMAS Daar El Qolam 2
+            </p>
+        </div>
+    </footer>
+
+    <!-- Audio Elements for Sound Effects -->
+    <audio id="snd-correct" src="https://assets.mixkit.co/active_storage/sfx/2000/2000-preview.mp3" preload="auto"></audio>
+    <audio id="snd-wrong" src="https://assets.mixkit.co/active_storage/sfx/2003/2003-preview.mp3" preload="auto"></audio>
+    <audio id="snd-click" src="https://assets.mixkit.co/active_storage/sfx/2568/2568-preview.mp3" preload="auto"></audio>
+    <audio id="snd-win" src="https://assets.mixkit.co/active_storage/sfx/1435/1435-preview.mp3" preload="auto"></audio>
+
+    <!-- JavaScript Logic -->
+    <script>
+        // Sound Management
+        let soundEnabled = true;
+
+        function playSound(type) {
+            if (!soundEnabled) return;
+            const snd = document.getElementById(`snd-${type}`);
+            if (snd) {
+                snd.currentTime = 0;
+                snd.play().catch(e => console.log('Audio error:', e));
+            }
+        }
+
+        function toggleSound() {
+            soundEnabled = !soundEnabled;
+            const icon = document.getElementById('soundIcon');
+            const text = document.getElementById('soundText');
+            
+            if (soundEnabled) {
+                icon.className = 'fa-solid fa-volume-high';
+                text.innerText = 'Sound ON';
+            } else {
+                icon.className = 'fa-solid fa-volume-xmark';
+                text.innerText = 'Sound OFF';
+            }
+            playSound('click');
+        }
+
+        // Section Navigation
+        function showSection(sectionId) {
+            playSound('click');
+            const sections = ['welcome', 'guide', 'material', 'games', 'quiz'];
+            sections.forEach(id => {
+                const el = document.getElementById(`${id}-section`);
+                if (el) el.classList.add('hidden');
+            });
+            const target = document.getElementById(`${sectionId}-section`);
+            if (target) target.classList.remove('hidden');
+
+            if (sectionId === 'games') {
+                loadGame(1);
+            } else if (sectionId === 'quiz') {
+                renderQuiz();
+            }
+        }
+
+        // Material Tabs Navigation
+        function showTab(tabId) {
+            playSound('click');
+            document.querySelectorAll('.mat-content').forEach(el => el.classList.add('hidden'));
+            document.getElementById(tabId).classList.remove('hidden');
+        }
+
+        // ================= GIM LOGIC =================
+        function loadGame(gameNum) {
+            playSound('click');
+            const arena = document.getElementById('game-arena');
+            
+            if (gameNum === 1) {
+                renderGame1(arena);
+            } else if (gameNum === 2) {
+                renderGame2(arena);
+            } else if (gameNum === 3) {
+                renderGame3(arena);
+            }
+        }
+
+        // --- Game 1: S-V Matching ---
+        const game1Data = [
+            { subject: "The cat", verb: "sleeps", wrong: "sleep", icon: "fa-cat" },
+            { subject: "The students", verb: "study", wrong: "studies", icon: "fa-user-graduate" },
+            { subject: "My friend", verb: "likes", wrong: "like", icon: "fa-user" },
+            { subject: "The cars", verb: "run", wrong: "runs", icon: "fa-car" }
+        ];
+        let g1Idx = 0;
+
+        function renderGame1(container) {
+            if (g1Idx >= game1Data.length) {
+                container.innerHTML = `
+                    <div class="text-center space-y-3">
+                        <i class="fa-solid fa-circle-check text-5xl text-pixarGreen"></i>
+                        <h3 class="font-heading text-2xl">Awesome Job!</h3>
+                        <p class="text-sm text-slate-600">You matched all subjects and verbs correctly!</p>
+                        <button onclick="g1Idx=0; renderGame1(document.getElementById('game-arena'))" class="pixar-btn btn-blue px-4 py-2 text-sm">Play Again</button>
+                    </div>
+                `;
+                return;
+            }
+
+            const item = game1Data[g1Idx];
+            const isVerbFirst = Math.random() < 0.5;
+            const btn1Text = isVerbFirst ? item.verb : item.wrong;
+            const btn2Text = isVerbFirst ? item.wrong : item.verb;
+
+            container.innerHTML = `
+                <div class="w-full max-w-md text-center space-y-4">
+                    <span class="bg-blue-100 text-pixarBlue text-xs font-bold px-3 py-1 rounded-full">Game 1: Matching Pair</span>
+                    <h3 class="font-heading text-xl">Choose the matching verb!</h3>
+                    
+                    <div class="p-6 bg-white rounded-2xl shadow-md border-2 border-pixarBlue flex items-center justify-center gap-3">
+                        <i class="fa-solid ${item.icon} text-3xl text-pixarYellow"></i>
+                        <span class="font-heading text-2xl text-slate-800">${item.subject} _____</span>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4">
+                        <button onclick="checkG1('${btn1Text}', '${item.verb}')" class="pixar-btn btn-yellow p-4 text-xl">${btn1Text}</button>
+                        <button onclick="checkG1('${btn2Text}', '${item.verb}')" class="pixar-btn btn-yellow p-4 text-xl">${btn2Text}</button>
+                    </div>
+                </div>
+            `;
+        }
+
+        function checkG1(selected, correct) {
+            if (selected === correct) {
+                playSound('correct');
+                g1Idx++;
+                renderGame1(document.getElementById('game-arena'));
+            } else {
+                playSound('wrong');
+                alert('Oops! Try again!');
+            }
+        }
+
+        // --- Game 2: Distractor Buster ---
+        const game2Data = [
+            { sentence: "The book (of stories) _____ very interesting.", correct: "is", wrong: "are" },
+            { sentence: "The players (on the team) _____ hard every day.", correct: "run", wrong: "runs" },
+            { sentence: "The teacher (with her students) _____ coming now.", correct: "is", wrong: "are" }
+        ];
+        let g2Idx = 0;
+
+        function renderGame2(container) {
+            if (g2Idx >= game2Data.length) {
+                container.innerHTML = `
+                    <div class="text-center space-y-3">
+                        <i class="fa-solid fa-shield-halved text-5xl text-pixarYellow"></i>
+                        <h3 class="font-heading text-2xl">Distractor Busted!</h3>
+                        <p class="text-sm text-slate-600">You didn't get fooled by prepositional phrases!</p>
+                        <button onclick="g2Idx=0; renderGame2(document.getElementById('game-arena'))" class="pixar-btn btn-yellow px-4 py-2 text-sm">Play Again</button>
+                    </div>
+                `;
+                return;
+            }
+
+            const item = game2Data[g2Idx];
+            container.innerHTML = `
+                <div class="w-full max-w-md text-center space-y-4">
+                    <span class="bg-yellow-100 text-yellow-800 text-xs font-bold px-3 py-1 rounded-full">Game 2: Distractor Buster</span>
+                    <p class="text-xs text-slate-500">Ignore the words in brackets (Prepositional Phrase)!</p>
+                    
+                    <div class="p-6 bg-white rounded-2xl shadow-md border-2 border-pixarYellow">
+                        <p class="font-heading text-lg text-slate-800">${item.sentence}</p>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4">
+                        <button onclick="checkG2('${item.correct}', '${item.correct}')" class="pixar-btn btn-green p-3 text-lg">${item.correct}</button>
+                        <button onclick="checkG2('${item.wrong}', '${item.correct}')" class="pixar-btn btn-red p-3 text-lg">${item.wrong}</button>
+                    </div>
+                </div>
+            `;
+        }
+
+        function checkG2(selected, correct) {
+            if (selected === correct) {
+                playSound('correct');
+                g2Idx++;
+                renderGame2(document.getElementById('game-arena'));
+            } else {
+                playSound('wrong');
+                alert('Watch out for the distractor phrase!');
+            }
+        }
+
+        // --- Game 3: Speed Runner ---
+        let g3Score = 0;
+        let g3Time = 15;
+        let g3Timer = null;
+
+        function renderGame3(container) {
+            g3Score = 0;
+            g3Time = 15;
+            clearInterval(g3Timer);
+
+            container.innerHTML = `
+                <div class="w-full max-w-md text-center space-y-4">
+                    <span class="bg-green-100 text-pixarGreen text-xs font-bold px-3 py-1 rounded-full">Game 3: Speed Runner</span>
+                    <h3 class="font-heading text-xl">Quick S-V Accuracy!</h3>
+                    
+                    <div class="flex justify-between items-center bg-white p-3 rounded-xl border">
+                        <span class="font-bold text-slate-600">Time: <b id="g3-timer" class="text-pixarRed text-xl">15</b>s</span>
+                        <span class="font-bold text-slate-600">Score: <b id="g3-score" class="text-pixarGreen text-xl">0</b></span>
+                    </div>
+
+                    <div id="g3-card" class="p-6 bg-white rounded-2xl shadow-md border-2 border-pixarGreen">
+                        <p id="g3-q" class="font-heading text-xl">Click START when ready!</p>
+                    </div>
+
+                    <div id="g3-btns" class="grid grid-cols-2 gap-4 hidden">
+                        <button onclick="answerG3(true)" class="pixar-btn btn-green p-3 text-lg">Singular (-s)</button>
+                        <button onclick="answerG3(false)" class="pixar-btn btn-blue p-3 text-lg">Plural (No -s)</button>
+                    </div>
+
+                    <button id="g3-start" onclick="startG3()" class="pixar-btn btn-green px-6 py-3 text-lg">START GAME</button>
+                </div>
+            `;
+        }
+
+        const g3Questions = [
+            { text: "She (walk / walks)", isSingular: true },
+            { text: "They (play / plays)", isSingular: false },
+            { text: "The dog (bark / barks)", isSingular: true },
+            { text: "Birds (fly / flies)", isSingular: false },
+            { text: "He (eat / eats)", isSingular: true }
+        ];
+        let g3Current = 0;
+
+        function startG3() {
+            playSound('click');
+            document.getElementById('g3-start').classList.add('hidden');
+            document.getElementById('g3-btns').classList.remove('hidden');
+            g3Current = 0;
+            nextG3Question();
+
+            g3Timer = setInterval(() => {
+                g3Time--;
+                document.getElementById('g3-timer').innerText = g3Time;
+                if (g3Time <= 0) {
+                    clearInterval(g3Timer);
+                    endG3();
+                }
+            }, 1000);
+        }
+
+        function nextG3Question() {
+            if (g3Current >= g3Questions.length) g3Current = 0;
+            document.getElementById('g3-q').innerText = g3Questions[g3Current].text;
+        }
+
+        function answerG3(userChoice) {
+            if (userChoice === g3Questions[g3Current].isSingular) {
+                playSound('correct');
+                g3Score += 20;
+                document.getElementById('g3-score').innerText = g3Score;
+            } else {
+                playSound('wrong');
+            }
+            g3Current++;
+            nextG3Question();
+        }
+
+        function endG3() {
+            playSound('win');
+            const arena = document.getElementById('game-arena');
+            arena.innerHTML = `
+                <div class="text-center space-y-3">
+                    <i class="fa-solid fa-bolt text-5xl text-pixarYellow"></i>
+                    <h3 class="font-heading text-2xl">Time's Up!</h3>
+                    <p class="text-lg">Your Final Speed Score: <b class="text-pixarGreen">${g3Score}</b></p>
+                    <button onclick="renderGame3(document.getElementById('game-arena'))" class="pixar-btn btn-green px-4 py-2 text-sm">Try Again</button>
+                </div>
+            `;
+        }
+
+        // ================= QUIZ LOGIC =================
+        const quizData = [
+            {
+                q: "1. The result of the TOEFL tests ______ announced yesterday by the teacher.",
+                options: ["A) is", "B) was", "C) were", "D) are"],
+                ans: 1, // B
+                explain: "Subject-nya adalah 'The result' (Singular), kata 'of the TOEFL tests' adalah Prepositional Phrase. Karena keterangan waktu 'yesterday', gunakan 'was'."
+            },
+            {
+                q: "2. Neither the teacher nor the students ______ present in the library now.",
+                options: ["A) is", "B) was", "C) are", "D) be"],
+                ans: 2, // C
+                explain: "Untuk aturan 'Neither... nor...', kata kerja menyesuaikan dengan Subject terdekat dengannya yaitu 'the students' (Plural ➔ are)."
+            },
+            {
+                q: "3. Every student in this classroom ______ required to complete the assignment.",
+                options: ["A) is", "B) are", "C) were", "D) have"],
+                ans: 0, // A
+                explain: "Kata 'Every' selalu diikuti oleh Subject dan Verb bentuk tunggal (Singular ➔ is)."
+            },
+            {
+                q: "4. There ______ many interesting books about science in our school library.",
+                options: ["A) is", "B) are", "C) was", "D) has"],
+                ans: 1, // B
+                explain: "Pada pola kalimat 'There...', Subject berada di belakang kata kerja yaitu 'many interesting books' (Plural ➔ are)."
+            },
+            {
+                q: "5. One of the most famous landmarks in the city ______ visited by thousands of tourists.",
+                options: ["A) are", "B) is", "C) were", "D) have been"],
+                ans: 1, // B
+                explain: "Pola 'One of the...' memiliki Subject utama 'One' (Tunggal/Singular), sehingga membutuhkan Verb tunggal 'is'."
+            }
+        ];
+
+        let userAnswers = {};
+
+        function renderQuiz() {
+            const container = document.getElementById('quiz-container');
+            container.innerHTML = '';
+
+            quizData.forEach((item, idx) => {
+                const qBox = document.createElement('div');
+                qBox.className = 'p-5 bg-slate-50 border-2 border-slate-200 rounded-2xl space-y-3';
+                
+                let optionsHTML = '';
+                item.options.forEach((opt, optIdx) => {
+                    optionsHTML += `
+                        <label class="flex items-center gap-3 bg-white p-3 rounded-xl border hover:border-pixarBlue cursor-pointer transition-all">
+                            <input type="radio" name="q${idx}" value="${optIdx}" onclick="selectQuizAns(${idx}, ${optIdx})" class="w-4 h-4 text-pixarBlue">
+                            <span class="text-sm font-semibold text-slate-700">${opt}</span>
+                        </label>
+                    `;
+                });
+
+                qBox.innerHTML = `
+                    <p class="font-heading text-slate-800 text-lg">${item.q}</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
+                        ${optionsHTML}
+                    </div>
+                    <div id="explain-${idx}" class="hidden p-3 bg-blue-50 border border-blue-200 rounded-xl text-xs text-slate-700 mt-2">
+                        <b>Pembahasan:</b> ${item.explain}
+                    </div>
+                `;
+                container.appendChild(qBox);
+            });
+
+            const submitBtn = document.createElement('div');
+            submitBtn.className = 'text-center pt-4';
+            submitBtn.innerHTML = `
+                <button onclick="submitQuiz()" class="pixar-btn btn-red px-8 py-3 text-lg">Submit Quiz <i class="fa-solid fa-paper-plane ml-2"></i></button>
+            `;
+            container.appendChild(submitBtn);
+        }
+
+        function selectQuizAns(qIdx, optIdx) {
+            playSound('click');
+            userAnswers[qIdx] = optIdx;
+        }
+
+        function submitQuiz() {
+            if (Object.keys(userAnswers).length < quizData.length) {
+                alert('Please answer all 5 questions before submitting!');
+                return;
+            }
+
+            let correctCount = 0;
+            quizData.forEach((item, idx) => {
+                const explainBox = document.getElementById(`explain-${idx}`);
+                if (explainBox) explainBox.classList.remove('hidden');
+
+                if (userAnswers[idx] === item.ans) {
+                    correctCount++;
+                }
+            });
+
+            const score = correctCount * 20;
+            document.getElementById('quiz-score-display').innerText = score;
+            document.getElementById('final-score').innerText = score;
+
+            const feedback = document.getElementById('quiz-feedback');
+            if (score === 100) {
+                feedback.innerText = "Perfect Score! You are a TOEFL Subject-Verb Agreement Master! 🎉";
+                playSound('win');
+                confetti({ particleCount: 100, spread: 70, origin: { y: 0.6 } });
+            } else if (score >= 60) {
+                feedback.innerText = "Good job! Keep practicing to reach a perfect score!";
+                playSound('win');
+            } else {
+                feedback.innerText = "Don't give up! Review the material and try again!";
+                playSound('wrong');
+            }
+
+            document.getElementById('quiz-result').classList.remove('hidden');
+            window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+        }
+
+        function resetQuiz() {
+            playSound('click');
+            userAnswers = {};
+            document.getElementById('quiz-score-display').innerText = '0';
+            document.getElementById('quiz-result').classList.add('hidden');
+            renderQuiz();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
